@@ -23,15 +23,6 @@ int main()
         return EXIT_FAILURE;
     }
     
-    cout << "Row height (e.g., 10)? ";
-	int rsize;	//uninitialized variable
-	cin >> rsize;
-    
-    if (!cin) {
-        cerr << "Sorry, that wasn't a number.\n";
-        return EXIT_FAILURE;
-    }
-    
 	cout << "How many columns (e.g., 10)? ";
 	int ncols;	//uninitialized variable
 	cin >> ncols;
@@ -41,7 +32,16 @@ int main()
         return EXIT_FAILURE;
     }
     
-    cout << "Column width (e.g., 10)? ";
+    cout << "How many rows of blanks in each box (e.g., 1)? ";
+	int rsize;	//uninitialized variable
+	cin >> rsize;
+    
+    if (!cin) {
+        cerr << "Sorry, that wasn't a number.\n";
+        return EXIT_FAILURE;
+    }
+    
+    cout << "How many columns of blanks in each box (e.g., 3)? ";
 	int csize;	//uninitialized variable
 	cin >> csize;
     
@@ -49,8 +49,6 @@ int main()
         cerr << "Sorry, that wasn't a number.\n";
         return EXIT_FAILURE;
     }
-    
-    
     
 	for (int r = 0; r < nrows; ++r) {
 		for (int c = 0; c < ncols; ++c) {
